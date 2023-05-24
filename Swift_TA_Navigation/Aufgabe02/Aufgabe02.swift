@@ -27,9 +27,28 @@ struct Aufgabe02: View {
                anzahlMonde: 14, temperatur: -201, monde: ["Triton", "Nereid"]),
     ]
     var body: some View {
-        Text("Navigation Aufgabe02 hier rein")
+        NavigationStack{
+            List{
+                ForEach(planets){planet in
+                    NavigationLink(value: planet){
+                        HStack{
+                            Image(planet.image)
+                                .resizable()
+                                .frame(width: 40,height: 40)
+                            Text(planet.name)
+                                .font(.title2)
+                        }
+                    }
+                }
+            }
+            .navigationDestination(for: Planet.self) {planet in
+                PlanetDetail(planet: planet)
+            }
+            .navigationTitle("Sonnensystem")
+        }
     }
 }
+
 
 struct Aufgabe02_Previews: PreviewProvider {
     static var previews: some View {

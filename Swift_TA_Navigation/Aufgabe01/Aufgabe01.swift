@@ -9,9 +9,18 @@ import SwiftUI
 
 struct Aufgabe01: View {
     var body: some View {
-        Text("Navigation Aufgabe01 hier rein")
+        NavigationStack{
+            VStack{
+                List{
+                    NavigationLink("Profile View", destination: ProfileView())
+                    NavigationLink("Settings View", destination: SettingsView())
+                    NavigationLink("Shapes View", destination: ShapesView())
+                    }
+                    
+                }
+            }
+        }
     }
-}
 
 struct Aufgabe01_Previews: PreviewProvider {
     static var previews: some View {

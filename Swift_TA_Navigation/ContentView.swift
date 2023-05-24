@@ -9,8 +9,8 @@ import SwiftUI
 // Ruft die Aufgabe hier auf aber kommentiert die jeweils andere aus
 struct ContentView: View {
     var body: some View {
-       Aufgabe01()
-//     Aufgabe02()
+//       Aufgabe01()
+     Aufgabe02()
     }
 }
 
