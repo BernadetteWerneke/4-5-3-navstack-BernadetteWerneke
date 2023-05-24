@@ -14,7 +14,7 @@ struct Aufgabe01: View {
                 List{
                     NavigationLink("Profile View", destination: ProfileView())
                     NavigationLink("Settings View", destination: SettingsView())
-                    NavigationLink("Shapes View", destination: ShapesView())
+                    NavigationLink("Shapes View") {ShapesView()}
                     }
                     
                 }

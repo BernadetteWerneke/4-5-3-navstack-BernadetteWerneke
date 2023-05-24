@@ -10,14 +10,14 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         VStack{
-            Text("Mein Profil")
+            Text("Profil")
                 .font(.largeTitle)
                 .foregroundColor(.green)
                 .bold()
-            Image(systemName: "person.crop.circle.fill")
+            Image("0")
                 .resizable()
-                .frame(width: 100, height: 100)
-                .foregroundColor(.gray)
+                .clipShape(Circle())
+                .scaledToFit()
             Text("Max Mustermann")
                 .font(.title)
                 .foregroundColor(.cyan)
@@ -26,7 +26,7 @@ struct ProfileView: View {
                 .foregroundColor(.mint)
             Text("Beruf: Hausmeister")
                 .foregroundColor(.indigo)
-            Text("Alter: 44")
+            Text("Alter: 74")
                 .foregroundColor(.indigo)
             Text("Wohnort: Kleindorf")
                 .foregroundColor(.indigo)

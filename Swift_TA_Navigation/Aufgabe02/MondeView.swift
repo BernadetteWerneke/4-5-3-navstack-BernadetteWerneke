@@ -12,8 +12,11 @@ struct MondeView: View {
     var body: some View {
         List{
             ForEach(monde, id: \.self) { mond in
-                Text("\(mond)")
-            }
+                Text(mond)
+            }.navigationTitle("Monde")
+            /*List(monde, id: \.self ){
+                monde in Text(monde)
+            }*/
         }
     }
 }

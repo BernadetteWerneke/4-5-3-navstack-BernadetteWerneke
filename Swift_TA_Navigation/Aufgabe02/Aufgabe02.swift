@@ -34,17 +34,16 @@ struct Aufgabe02: View {
                         HStack{
                             Image(planet.image)
                                 .resizable()
-                                .frame(width: 40,height: 40)
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
                             Text(planet.name)
                                 .font(.title2)
                         }
                     }
                 }
-            }
-            .navigationDestination(for: Planet.self) {planet in
+            }.navigationDestination(for: Planet.self) {planet in
                 PlanetDetail(planet: planet)
-            }
-            .navigationTitle("Sonnensystem")
+            }.navigationTitle("Sonnensystem").navigationBarTitleDisplayMode(.inline)
         }
     }
 }
